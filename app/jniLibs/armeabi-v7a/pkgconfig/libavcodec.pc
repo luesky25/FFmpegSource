@@ -1,0 +1,14 @@
+prefix=/usr/android/ffmpeg-4.1.5/android/arm64
+exec_prefix=${prefix}
+libdir=/usr/android/ffmpeg-4.1.5/android/arm64/lib
+includedir=/usr/android/ffmpeg-4.1.5/android/arm64/include
+
+Name: libavcodec
+Description: FFmpeg codec library
+Version: 58.35.100
+Requires: 
+Requires.private: libavutil >= 56.22.100
+Conflicts:
+Libs: -L${libdir}  -lavcodec 
+Libs.private: -pthread -lm
+Cflags: -I${includedir}
